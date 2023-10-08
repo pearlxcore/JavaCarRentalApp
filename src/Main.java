@@ -18,11 +18,15 @@ public class Main {
         Date rentStartDate = new Date(2023, 06, 13);
         Date rentEndDate = new Date(2023, 06, 20);
 
-        List<Rental> RentalList = List.of(
-                new Rental(rentStartDate, rentEndDate, new Customer("Nadia", "nadia@mail.com", "01772882"), new Car("Honda", "City", 2021, "Red")),
-                new Rental(rentStartDate, rentEndDate, new Customer("Izzat", "izzat@mail.com", "0255537"), new Car("Proton", "Saga", 2017, "Gray")),
-                new Rental(rentStartDate, rentEndDate, new Customer("Fateh", "fateh@mail.com", "093338"), new Car("Nissan", "Skyline", 2012, "White")),
-                new Rental(rentStartDate, rentEndDate, new Customer("Aya", "aya@mail.com", "0333937"), new Car("Mini", "Cooper S", 2019, "Dark Green"))
+        List<Rental> rentalList = List.of(
+                new Rental(new Date(2023, 6, 13), new Date(2023, 6, 20), new Customer("John", "john@mail.com", "01234567"), new Car("Toyota", "Camry", 2022, "Silver")),
+                new Rental(new Date(2023, 6, 13), new Date(2023, 6, 20), new Customer("Mary", "mary@mail.com", "98765432"), new Car("Ford", "Mustang", 2020, "Blue")),
+                new Rental(new Date(2023, 6, 13), new Date(2023, 6, 20), new Customer("Robert", "robert@mail.com", "11223344"), new Car("Volkswagen", "Jetta", 2021, "Black")),
+                new Rental(new Date(2023, 6, 13), new Date(2023, 6, 20), new Customer("Emily", "emily@mail.com", "55555555"), new Car("Hyundai", "Elantra", 2019, "White")),
+                new Rental(new Date(2023, 6, 13), new Date(2023, 6, 20), new Customer("David", "david@mail.com", "66666666"), new Car("Chevrolet", "Cruze", 2020, "Red")),
+                new Rental(new Date(2023, 6, 13), new Date(2023, 6, 20), new Customer("Sophia", "sophia@mail.com", "77777777"), new Car("Kia", "Sorento", 2021, "Green")),
+                new Rental(new Date(2023, 6, 13), new Date(2023, 6, 20), new Customer("Olivia", "olivia@mail.com", "88888888"), new Car("Mazda", "CX-5", 2022, "Blue")),
+                new Rental(new Date(2023, 6, 13), new Date(2023, 6, 20), new Customer("Liam", "liam@mail.com", "99999999"), new Car("Subaru", "Outback", 2020, "Gray"))
         );
 
         // initialize gson
@@ -30,7 +34,7 @@ public class Main {
 
         System.out.println("\nRental detail:");
 
-        for (Rental rental_ : RentalList ) {
+        for (Rental rental_ : rentalList ) {
             String rentalDetailJson = gson.toJson(rental_);
             System.out.println(rentalDetailJson);
             System.out.println();
